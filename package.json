@@ -29,6 +29,7 @@
     "pree2e:test": "wait-on -l -t 30000 http-get://localhost:3001",
     "e2e:test": "cross-env CYPRESS_BASE_URL=http://localhost:3001 cypress run",
     "eject": "react-scripts eject",
+    "lint": "eslint .",
     "start": "react-scripts start",
     "test": "react-scripts test"
   },
