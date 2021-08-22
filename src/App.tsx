@@ -32,9 +32,9 @@ function App() {
         />
       </label>
 
-      <button onClick={() => setData({ ...data, volume: 330 })}>330ml</button>
-      <button onClick={() => setData({ ...data, volume: 440 })}>440ml</button>
-      <button onClick={() => setData({ ...data, volume: 568 })}>568ml</button>
+      {[330, 440, 568].map((volume) => (
+        <button onClick={() => setData({ ...data, volume })}>{volume}ml</button>
+      ))}
 
       <label>
         Calories
