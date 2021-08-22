@@ -30,6 +30,7 @@
     "e2e:test": "cross-env CYPRESS_BASE_URL=http://localhost:3001 cypress run",
     "eject": "react-scripts eject",
     "lint": "eslint .",
+    "ship": "npm run lint && cross-env CI=true npm test && npm run e2e",
     "start": "react-scripts start",
     "test": "react-scripts test"
   },
