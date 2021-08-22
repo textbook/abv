@@ -1,6 +1,6 @@
-it("shows the CRA homepage", () => {
+it("calculates calories for the specified beer", () => {
   cy.visit("/");
-  cy
-    .findAllByRole("link", { name: "Learn React" })
-    .should("have.attr", "href", "https://reactjs.org");
+  cy.findByRole("spinbutton", { name: "ABV (%)" }).type("8.0");
+  cy.findByRole("spinbutton", { name: "Volume (ml)" }).type("440");
+  cy.findByRole("textbox", { name: "Calories" }).should("have.value", "298");
 });
