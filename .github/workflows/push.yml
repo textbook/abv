@@ -11,6 +11,16 @@ jobs:
       with:
         node-version: 16
         cache: 'npm'
-    - run: npm ci
-    - run: npm run lint
-    - run: npm run e2e
+    - name: Install 📦
+      run: npm ci
+    - name: Test 🧪
+      run: |
+        npm run lint
+        npm run e2e
+    - name: Build 🛠
+      run: npm run build
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@4.1.4
+      with:
+        branch: gh-pages
+        folder: build
