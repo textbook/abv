@@ -5,16 +5,21 @@
   > * {
     margin: 1rem;
   }
-}
 
-.buttons button {
-  margin: 0.5rem;
+  .buttons button {
+    margin: 0.5rem;
+    padding: 0.25rem 1rem;
 
-  &:first-of-type {
-    margin-left: 0;
+    &:first-of-type {
+      margin-left: 0;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
   }
 
-  &:last-of-type {
-    margin-right: 0;
+  input {
+    margin-left: 0.5rem;
   }
 }
