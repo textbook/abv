@@ -46,12 +46,12 @@ function App() {
 			</div>
 
 			<label>
-        Calories
+				Calories
 				<input
 					name="calories"
 					readOnly
 					type="text"
-					value={`${calories}`}
+					value={Number.isNaN(calories) ? "0" : `${calories}`}
 				/>
 			</label>
 		</div>

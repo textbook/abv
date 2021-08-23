@@ -45,4 +45,10 @@ describe("App component", () => {
 		userEvent.click(screen.getByRole("button", { name: "568ml" }));
 		expect(screen.getByRole("textbox", { name: "Calories" })).toHaveValue("240");
 	});
+
+	it("gracefully handles NaN", () => {
+		render(<App />);
+		userEvent.clear(screen.getByRole("spinbutton", { name: "ABV (%)" }));
+		expect(screen.getByRole("textbox", { name: "Calories" })).toHaveValue("0");
+	});
 });
