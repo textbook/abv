@@ -2,6 +2,8 @@
   "name": "abv",
   "version": "0.1.0",
   "private": true,
+  "author": "Jonathan Sharpe <mail@jonrshar.pe>",
+  "license": "ISC",
   "dependencies": {
     "@codeyourfuture/eslint-config-standard": "^3.0.0",
     "@testing-library/cypress": "^8.0.0",
