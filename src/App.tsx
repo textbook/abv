@@ -1,5 +1,7 @@
 import { ChangeEventHandler, useState } from "react";
 
+import "./App.scss";
+
 const FACTOR = 2.5 / 29.57;
 
 function App() {
@@ -11,7 +13,7 @@ function App() {
 	};
 
 	return (
-		<div>
+		<div className="container" role="main">
 			<label>
         ABV (%)
 				<input
@@ -32,9 +34,16 @@ function App() {
 				/>
 			</label>
 
-			{[330, 440, 568].map((volume) => (
-				<button onClick={() => setData({ ...data, volume })}>{volume}ml</button>
-			))}
+			<div className="buttons">
+				{[330, 440, 568].map((volume) => (
+					<button
+						onClick={() => setData({ ...data, volume })}
+						key={volume}
+					>
+						{volume}ml
+					</button>
+				))}
+			</div>
 
 			<label>
         Calories
