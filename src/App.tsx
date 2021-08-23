@@ -3,50 +3,50 @@ import { ChangeEventHandler, useState } from "react";
 const FACTOR = 2.5 / 29.57;
 
 function App() {
-  const [data, setData] = useState({ abv: 0, volume: 0 });
-  const calories = Math.round(data.abv * data.volume * FACTOR);
+	const [data, setData] = useState({ abv: 0, volume: 0 });
+	const calories = Math.round(data.abv * data.volume * FACTOR);
 
-  const changeHandler: ChangeEventHandler<HTMLInputElement> = ({ target: { name, value } }) => {
-    setData({ ...data, [name]: parseFloat(value) });
-  }
+	const changeHandler: ChangeEventHandler<HTMLInputElement> = ({ target: { name, value } }) => {
+		setData({ ...data, [name]: parseFloat(value) });
+	};
 
-  return (
-    <div>
-      <label>
+	return (
+		<div>
+			<label>
         ABV (%)
-        <input
-          name="abv"
-          onChange={changeHandler}
-          type="number"
-          value={data.abv}
-        />
-      </label>
+				<input
+					name="abv"
+					onChange={changeHandler}
+					type="number"
+					value={data.abv}
+				/>
+			</label>
 
-      <label>
+			<label>
         Volume (ml)
-        <input
-          name="volume"
-          onChange={changeHandler}
-          type="number"
-          value={data.volume}
-        />
-      </label>
+				<input
+					name="volume"
+					onChange={changeHandler}
+					type="number"
+					value={data.volume}
+				/>
+			</label>
 
-      {[330, 440, 568].map((volume) => (
-        <button onClick={() => setData({ ...data, volume })}>{volume}ml</button>
-      ))}
+			{[330, 440, 568].map((volume) => (
+				<button onClick={() => setData({ ...data, volume })}>{volume}ml</button>
+			))}
 
-      <label>
+			<label>
         Calories
-        <input
-          name="calories"
-          readOnly
-          type="text"
-          value={`${calories}`}
-        />
-      </label>
-    </div>
-  );
+				<input
+					name="calories"
+					readOnly
+					type="text"
+					value={`${calories}`}
+				/>
+			</label>
+		</div>
+	);
 }
 
 export default App;

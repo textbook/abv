@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@codeyourfuture/eslint-config-standard": "^3.0.0",
     "@testing-library/cypress": "^8.0.0",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
@@ -37,7 +38,8 @@
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "@codeyourfuture/standard"
     ],
     "overrides": [
       {
@@ -45,7 +47,7 @@
           "plugin:cypress/recommended"
         ],
         "files": [
-          "cypress/**/*.js"
+          "e2e/**/*.ts"
         ]
       }
     ]
