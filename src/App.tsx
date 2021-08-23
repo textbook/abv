@@ -1,6 +1,7 @@
 import { ChangeEventHandler, useState } from "react";
 
 import "./App.scss";
+import NumericInput from "./NumericInput";
 
 const FACTOR = 2.5 / 29.57;
 
@@ -14,25 +15,19 @@ function App() {
 
 	return (
 		<div className="container" role="main">
-			<label>
-        ABV (%)
-				<input
-					name="abv"
-					onChange={changeHandler}
-					type="number"
-					value={data.abv}
-				/>
-			</label>
+			<NumericInput
+				label="ABV (%)"
+				name="abv"
+				onChange={changeHandler}
+				value={data.abv}
+			/>
 
-			<label>
-        Volume (ml)
-				<input
-					name="volume"
-					onChange={changeHandler}
-					type="number"
-					value={data.volume}
-				/>
-			</label>
+			<NumericInput
+				label="Volume (ml)"
+				name="volume"
+				onChange={changeHandler}
+				value={data.volume}
+			/>
 
 			<div className="buttons">
 				{[330, 440, 568].map((volume) => (
