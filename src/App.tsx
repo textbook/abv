@@ -1,12 +1,17 @@
-import { ChangeEventHandler, useState } from "react";
+import { ChangeEventHandler, FC, useState } from "react";
 
 import "./App.scss";
 import NumericInput from "./NumericInput";
 
 const FACTOR = 2.5 / 29.57;
 
-function App() {
-	const [data, setData] = useState({ abv: 0, volume: 0 });
+interface AppState {
+	abv: number;
+	volume: number;
+}
+
+const App: FC = () => {
+	const [data, setData] = useState<AppState>({ abv: 0, volume: 0 });
 	const calories = Math.round(data.abv * data.volume * FACTOR);
 
 	const changeHandler: ChangeEventHandler<HTMLInputElement> = ({ target: { name, value } }) => {
@@ -51,6 +56,6 @@ function App() {
 			</label>
 		</div>
 	);
-}
+};
 
 export default App;
