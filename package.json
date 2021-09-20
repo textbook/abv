@@ -29,7 +29,9 @@
   },
   "scripts": {
     "build": "react-scripts build",
+    "dev": "concurrently -k -s first -n \"app,e2e\" \"npm:start\" \"npm:e2e:open\"",
     "e2e": "concurrently -k -s first -n \"app,e2e\" \"npm:e2e:start\" \"npm:e2e:test\"",
+    "e2e:open": "cypress open",
     "e2e:start": "cross-env PORT=3001 npm run serve",
     "pree2e:test": "wait-on -l -t 30000 http-get://localhost:3001",
     "e2e:test": "cross-env CYPRESS_BASE_URL=http://localhost:3001 cypress run",
