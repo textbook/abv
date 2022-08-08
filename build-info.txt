@@ -1,5 +1,5 @@
-Built: 2022-08-02T16:49:08.411Z
+Built: 2022-08-08T22:33:38.984Z
 By: runner
-From: d1fd502 Add build info to output directory
-In: GitHub Actions build 20
-URL: https://github.com/textbook/abv/actions/runs/2783790309
+From: fc19afd Have a single build artifact for E2E and deploy
+In: GitHub Actions build 21
+URL: https://github.com/textbook/abv/actions/runs/2821395921
