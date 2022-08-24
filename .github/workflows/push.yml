@@ -6,8 +6,8 @@ jobs:
   build:
     runs-on: ubuntu-20.04
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v2
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
       with:
         node-version: 16
         cache: 'npm'
@@ -19,7 +19,7 @@ jobs:
         npm test
         npm run e2e
     - name: Deploy 🚀
-      uses: JamesIves/github-pages-deploy-action@4.1.4
+      uses: JamesIves/github-pages-deploy-action@4.4.0
       with:
         branch: gh-pages
         folder: build
