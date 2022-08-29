@@ -1,5 +1,5 @@
-Built: 2022-08-24T17:38:59.756Z
+Built: 2022-08-29T16:20:43.952Z
 By: runner
-From: 9cddf23 Fix typo in Actions spec
-In: GitHub Actions build 23
-URL: https://github.com/textbook/abv/actions/runs/2921139889
+From: 189ac36 Upgrade web-vitals to v3
+In: GitHub Actions build 24
+URL: https://github.com/textbook/abv/actions/runs/2950076848
