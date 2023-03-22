@@ -1,5 +1,5 @@
-Built: 2022-10-05T16:34:01.946Z
+Built: 2023-03-22T20:49:53.313Z
 By: runner
-From: 03a25a4 Update dependencies
-In: GitHub Actions build 25
-URL: https://github.com/textbook/abv/actions/runs/3191058588
+From: f0d44ec Fix numeric entry issue in Safari
+In: GitHub Actions build 26
+URL: https://github.com/textbook/abv/actions/runs/4494351135
