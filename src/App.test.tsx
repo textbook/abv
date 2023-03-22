@@ -54,10 +54,10 @@ describe("App component", () => {
 	});
 });
 
-const getAbvInput = () => screen.getByRole("spinbutton", { name: "ABV (%)" });
+const getAbvInput = () => screen.getByRole("textbox", { name: "ABV (%)" });
 
 const getCaloriesTextbox = () => screen.getByRole("textbox", { name: "Calories" });
 
 const getVolumeButton = (volume: string) => screen.getByRole("button", { name: volume });
 
-const getVolumeInput = () => screen.getByRole("spinbutton", { name: "Volume (ml)" });
+const getVolumeInput = () => screen.getByRole("textbox", { name: "Volume (ml)" });

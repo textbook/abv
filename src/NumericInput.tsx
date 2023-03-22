@@ -4,17 +4,16 @@ type NumericInputProps = {
 	label: string;
 	name: string;
 	onChange: ChangeEventHandler<HTMLInputElement>;
-	value: number;
+	value: string;
 }
 
 const NumericInput: FC<NumericInputProps> = ({ label, name, onChange, value }) => (
 	<label>
 		{label}
 		<input
-			inputMode="decimal"
 			name={name}
 			onChange={onChange}
-			type="number"
+			type="text"
 			value={value}
 		/>
 	</label>

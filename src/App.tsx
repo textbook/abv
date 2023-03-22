@@ -6,16 +6,16 @@ import NumericInput from "./NumericInput";
 const FACTOR = 2.5 / 29.57;
 
 interface AppState {
-	abv: number;
-	volume: number;
+	abv: string;
+	volume: string;
 }
 
 const App: FC = () => {
-	const [data, setData] = useState<AppState>({ abv: 0, volume: 0 });
-	const calories = Math.round(data.abv * data.volume * FACTOR);
+	const [data, setData] = useState<AppState>({ abv: "0", volume: "0" });
+	const calories = Math.round(parseFloat(data.abv) * parseFloat(data.volume) * FACTOR);
 
 	const changeHandler: ChangeEventHandler<HTMLInputElement> = ({ target: { name, value } }) => {
-		setData({ ...data, [name]: parseFloat(value) });
+		setData({ ...data, [name]: value });
 	};
 
 	return (
@@ -35,7 +35,7 @@ const App: FC = () => {
 			/>
 
 			<div className="buttons">
-				{[330, 440, 568].map((volume) => (
+				{["330", "440", "568"].map((volume) => (
 					<button
 						onClick={() => setData({ ...data, volume })}
 						key={volume}
