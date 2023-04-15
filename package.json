@@ -41,7 +41,7 @@
     "lint": "eslint .",
     "preserve": "npm run build",
     "serve": "serve build/",
-    "ship": "npm run lint && cross-env CI=true npm test && npm run e2e",
+    "ship": "npm run lint && npm test -- --watchAll=false && npm run e2e",
     "start": "cross-env BROWSER=none react-scripts start",
     "test": "react-scripts test"
   },
