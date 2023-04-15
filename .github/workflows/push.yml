@@ -18,7 +18,7 @@ jobs:
         npm run lint
         npm test
         npm run e2e
-      environment:
+      env:
         FORCE_COLOR: true
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@v4.4.0
