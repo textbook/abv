@@ -10,7 +10,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
-    "@textbook/build-info": "^0.4.5",
+    "@textbook/build-info": "^0.5.1",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.34",
     "@types/react": "^18.2.8",
@@ -30,7 +30,7 @@
   },
   "scripts": {
     "build": "react-scripts build",
-    "postbuild": "buildinfo build/build-info.txt",
+    "postbuild": "buildinfo --output build/build-info.txt",
     "dev": "concurrently --kill-others --names \"app,e2e\" --success first \"npm:start\" \"npm:e2e:open\"",
     "e2e": "concurrently --kill-others --names \"app,e2e\" --success first \"npm:e2e:start\" \"npm:e2e:test\"",
     "e2e:open": "cypress open --e2e",
