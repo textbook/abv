@@ -1,5 +1,5 @@
-Built: 2023-04-15T10:51:19.714Z
+Built: 2023-06-02T10:57:23.492Z
 By: runner
-From: e1f3e77 Fix typo in workflow
-In: GitHub Actions build 28
-URL: https://github.com/textbook/abv/actions/runs/4707407116
+From: a984d8d Upgrade build-info to v0.5
+In: GitHub Actions build 29
+URL: https://github.com/textbook/abv/actions/runs/5154735806
