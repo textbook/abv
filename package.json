@@ -6,7 +6,7 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
-    "@codeyourfuture/eslint-config-standard": "^3.0.3",
+    "@codeyourfuture/eslint-config-standard": "^4.0.3",
     "@testing-library/cypress": "^9.0.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^14.1.2",
