@@ -1,18 +1,16 @@
 name: Node.js CI
 
-on: [push, pull_request]
+on:
+  push:
+    branches: [ main ]
 
 jobs:
   build:
     runs-on: ubuntu-20.04
     steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-node@v3
+    - uses: textbook/take-action@nodejs
       with:
-        node-version: 16
-        cache: 'npm'
-    - name: Install 📦
-      run: npm ci
+        node-version: 20
     - name: Test 🧪
       run: |
         npm run lint
@@ -21,7 +19,8 @@ jobs:
       env:
         FORCE_COLOR: true
     - name: Deploy 🚀
-      uses: JamesIves/github-pages-deploy-action@v4.4.0
-      with:
-        branch: gh-pages
-        folder: build
+      run: |
+        git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+        npx gh-pages --dist build --user 'github-actions-bot <support+actions@github.com>'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
