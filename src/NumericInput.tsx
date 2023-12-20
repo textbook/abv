@@ -1,6 +1,6 @@
 import { ChangeEventHandler, FC } from "react";
 
-type NumericInputProps = {
+interface NumericInputProps {
 	label: string;
 	name: string;
 	onChange: ChangeEventHandler<HTMLInputElement>;

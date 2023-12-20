@@ -1,0 +1,49 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2020": true
+  },
+  "extends": [
+    "@codeyourfuture/standard",
+    "plugin:react/jsx-runtime",
+    "plugin:react-hooks/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:@typescript-eslint/strict",
+    "plugin:@typescript-eslint/stylistic"
+  ],
+  "overrides": [
+    {
+      "extends": [
+        "plugin:cypress/recommended",
+        "plugin:testing-library/dom"
+      ],
+      "files": [
+        "e2e/**/*.ts"
+      ],
+      "rules": {
+        "testing-library/await-async-queries": "off",
+        "testing-library/prefer-screen-queries": "off"
+      }
+    },
+    {
+      "files": [
+        "src/**/*.test.tsx"
+      ],
+      "extends": [
+        "plugin:vitest/recommended"
+      ]
+    }
+  ],
+  "plugins": [
+    "react-refresh"
+  ],
+  "rules": {
+    "react-refresh/only-export-components": [
+      "error",
+      {
+        "allowConstantExport": true
+      }
+    ]
+  }
+}
