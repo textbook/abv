@@ -1,5 +1,5 @@
-Built: 2023-12-20T11:39:29.797Z
+Built: 2023-12-20T11:52:43.975Z
 By: runner
-From: 18397ea Upgrade pipeline
-In: GitHub Actions build 31
-URL: https://github.com/textbook/abv/actions/runs/7274829986
+From: 0bb12c4 Use latest Ubuntu LTS in CI
+In: GitHub Actions build 32
+URL: https://github.com/textbook/abv/actions/runs/7274944046
