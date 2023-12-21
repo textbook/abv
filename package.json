@@ -48,7 +48,6 @@
     "e2e:start": "cross-env PORT=$npm_package_config_e2e_port npm run serve",
     "pree2e:test": "wait-on --log --timeout 30000 http-get://localhost:$npm_package_config_e2e_port",
     "e2e:test": "cross-env CYPRESS_BASE_URL=http://localhost:$npm_package_config_e2e_port cypress run",
-    "eject": "react-scripts eject",
     "lint": "eslint .",
     "preserve": "npm run build",
     "serve": "vite preview --port=$npm_package_config_e2e_port",
