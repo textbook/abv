@@ -1,5 +1,5 @@
-Built: 2023-12-20T11:52:43.975Z
+Built: 2024-01-08T22:44:13.855Z
 By: runner
-From: 0bb12c4 Use latest Ubuntu LTS in CI
-In: GitHub Actions build 32
-URL: https://github.com/textbook/abv/actions/runs/7274944046
+From: 73c573e Apply in-range dependency updates
+In: GitHub Actions build 33
+URL: https://github.com/textbook/abv/actions/runs/7454087933
