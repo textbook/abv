@@ -1,3 +1,4 @@
+/// <reference types="@testing-library/jest-dom" />
 /// <reference types="vitest/globals" />
 
 import { render, screen } from "@testing-library/react";
