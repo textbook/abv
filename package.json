@@ -9,7 +9,7 @@
     "@codeyourfuture/eslint-config-standard": "^4.0.3",
     "@testing-library/cypress": "^10.0.1",
     "@testing-library/jest-dom": "^6.4.5",
-    "@testing-library/react": "^14.3.1",
+    "@testing-library/react": "^15.0.7",
     "@testing-library/user-event": "^14.5.2",
     "@textbook/build-info": "^0.6.0",
     "@types/node": "^20.12.12",
@@ -40,7 +40,7 @@
   },
   "overrides": {
     "@testing-library/user-event": {
-      "@testing-library/dom": "^9.0.0"
+      "@testing-library/dom": "^10.0.0"
     }
   },
   "scripts": {
