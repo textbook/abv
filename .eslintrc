@@ -30,9 +30,16 @@
       "files": [
         "src/**/*.test.tsx"
       ],
-      "extends": [
-        "plugin:vitest/recommended"
-      ]
+      "plugins": ["vitest"],
+      "rules": {
+        "vitest/expect-expect": "error",
+        "vitest/no-commented-out-tests": "error",
+        "vitest/no-identical-title": "error",
+        "vitest/no-import-node-test": "error",
+        "vitest/valid-describe-callback": "error",
+        "vitest/valid-expect": "error",
+        "vitest/valid-title": "error"
+      }
     }
   ],
   "plugins": [
