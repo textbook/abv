@@ -9,6 +9,10 @@ export default defineConfig({
 	},
 	plugins: [react()],
 	test: {
+		coverage: {
+			include: ["src"],
+			provider: "v8",
+		},
 		environment: "jsdom",
 		globals: true,
 		setupFiles: [
