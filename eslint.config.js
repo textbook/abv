@@ -9,7 +9,7 @@ import testingLibrary from "eslint-plugin-testing-library";
 import globals from "globals";
 import typescript from "typescript-eslint";
 
-/** @type {import("eslint").Linter.FlatConfig} */
+/** @type {import("eslint").Linter.Config[]} */
 export default [
 	{
 		languageOptions: {
